@@ -11,5 +11,4 @@ TwoSum.o: TwoSum.cpp TwoSum.h
 	$(CXX) -c TwoSum.cpp
 
 clean:
-	del *.o
-
+	$ rm -f *.o
