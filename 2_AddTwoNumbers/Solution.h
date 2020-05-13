@@ -14,5 +14,7 @@ class Solution
 public: // If not declare this, the following functions will be treated as private.
 	Solution();
 	~Solution();
+	void printer(ListNode*);
+	ListNode* createNode(int);
 	ListNode* addTwoNumbers(ListNode*, ListNode*);
 };
