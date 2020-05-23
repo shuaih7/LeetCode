@@ -11,5 +11,5 @@ public: // If not declare this, the following functions will be treated as priva
 	~Solution();
 	string BruteForce(string);
 	string DoublePointer(string);
-	
+	string HashMap(string);
 };
