@@ -9,6 +9,5 @@ class Solution{
 public:
 	Solution();
 	~Solution();
-	string bruteForce(string);
 	string longestPalindrome(string);
 };
