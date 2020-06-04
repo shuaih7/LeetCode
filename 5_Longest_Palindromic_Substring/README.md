@@ -12,3 +12,6 @@ The median is 2.0
 ## Example 2:
 Input: "cbbd"
 Output: "bb"
+
+## Result:
+![image](https://github.com/shuaih7/LeetCode/blob/master/Runtime_Report/P5.jpg)
