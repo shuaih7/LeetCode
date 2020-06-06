@@ -25,3 +25,8 @@ P     I    N
 A   L S  I G
 Y A   H R
 P     I
+
+## Result:
+Note: This result is for the initial development
+
+![image](https://github.com/shuaih7/LeetCode/blob/master/Runtime_Report/P6.jpg)
