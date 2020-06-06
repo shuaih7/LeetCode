@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 #include "Solution.h"
 
 using namespace std;
@@ -15,14 +16,13 @@ Solution::~Solution()
 	
 }
 
+// Straight forward method, time complexity O(n)
 string Solution::convert(string s, int numRows)
 {
 	string result("");
-	vector<string> strRows;
+	vector<string> strRows(numRows, result); // Note: s.size() returns the type "unsigned int"
 	int direction = 1, unit = 2 * numRows - 2, curRow = 0;
 	if (numRows == 1) return s; // Hnadling the spectial case
-	
-	for (int i=0; i<numRows; i++) strRows.push_back(result); // Push back empty string
 	
 	for (int i=0; i<s.size(); i++){
 		
