@@ -21,7 +21,7 @@ int main()
 	double op_time = double(tm_end.QuadPart - tm_begin.QuadPart) / double(freq.QuadPart) * 1000.0;
 	
 	cout << "Printing out the result:" << endl;
-	cout << "The output median is " << result << endl;
+	cout << "The output string is " << result << endl;
 	cout << "The operation time is " << op_time << "ms" << endl;
 	
 	return 0;

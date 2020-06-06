@@ -1,6 +1,6 @@
 #include <iostream>
-#include <string>
 #include <windows.h>
+#include <bits/stdc++.h> 
 #include "Solution.h"
 
 using namespace std;
@@ -11,19 +11,19 @@ int main()
 	LARGE_INTEGER tm_begin, tm_end, freq;
 	QueryPerformanceFrequency(&freq);
 	
-	string str = "PAYPALISHIRING";
-	int numRows = 2;
+	int x = INT_MAX/10*10 + 1;
 	
-	QueryPerformanceCounter(&tm_begin);
+	QueryPerformanceCounter(&tm_begin); 
 	
-	string result = s.convert(str, numRows);
+	int result = s.reverse(x);
 	
 	QueryPerformanceCounter(&tm_end); 
 	double op_time = double(tm_end.QuadPart - tm_begin.QuadPart) / double(freq.QuadPart) * 1000.0;
 	
 	cout << "Printing out the result:" << endl;
-	cout << "The output string is " << result << endl;
+	cout << "The output value is " << result << endl;
 	cout << "The operation time is " << op_time << "ms" << endl;
+	
 	
 	return 0;
 }
