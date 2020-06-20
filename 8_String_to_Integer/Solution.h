@@ -12,7 +12,7 @@ public:
 	Solution(void);
 	~Solution(void);
 	int myAtoi(string);
-	
+	int myAtoiASCII(string);
 };
 
 #endif
