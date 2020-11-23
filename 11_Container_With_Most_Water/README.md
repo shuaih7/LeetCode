@@ -26,3 +26,7 @@ Given n non-negative integers a1, a2, ..., an , where each represents a point a
     n = height.length
     2 <= n <= 3 * 104
     0 <= height[i] <= 3 * 104
+
+### Answer:
+
+The answer to this problem is related to the double-pointer solutions, referring to the following [CSDN blog](https://blog.csdn.net/williamgavin/article/details/104135911)
