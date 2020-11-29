@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <algorithm>
+#include <vector>
 #include "Solution.h"
 
 using namespace std;
@@ -29,26 +31,56 @@ void Solution::initMap(void)
 	for (iter=intRomanMap.begin(); iter!=intRomanMap.end(); ++iter){
 		cout << iter->first << ", " << iter->second << endl; 
 	}*/
+	
+	strVector.push_back("I");
+	strVector.push_back("V");
+	strVector.push_back("X");
+	strVector.push_back("L");
+	strVector.push_back("C");
+	strVector.push_back("D");
+	strVector.push_back("M");
 }
 
 string Solution::intToRoman(int num)
 {
 	string result = "";
-	map<int,string>::iterator iter;
+	vector<string>::iterator iter;
 	
-	while (num > 0){
-		int digit = num % 10;
-		string base = iter->second;
-		string mid = (iter++)->second;
+	int index = 0;
+	while ((num+9)/10 > 0){
+		int residual = num % 10;
 		
-		if (num/10 > 0){
-			iter++;
-			cout << iter->first << endl;
+		if (residual == 9){
+			result = result + strVector[index+2] + strVector[index];
+			index += 2;
 			num /= 10;
-			//result = ...
+			continue;
 		}
-		else num = 0;
+		
+		if (residual == 5){
+			result += strVector[index + 1];
+			index += 2;
+			num /= 10;
+			continue;
+		}
+
+		if (residual == 4){
+			result = result + strVector[index+1] + strVector[index];
+			index += 2;
+			num /= 10;
+			continue;
+		}
+
+		// Other cases when the residual == 0, 1, 2, 3, 6, 7, 8
+		int iter_num = residual > 5? residual-5 : residual;
+		for (int i=0; i<iter_num; i++)
+			result += strVector[index];
+		result = residual > 5? result+strVector[index+1] : result;
+		index += 2;
+		num /= 10;
 	}
 	
+	
+	reverse(result.begin(), result.end()); // Reverse the string, should include <algorithm> at the very beginning
 	return result;
 }

@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 	Solution sln;
-	int num = 58;
+	int num = 10;
 	string result = sln.intToRoman(num);
 	
 	cout << "the result is " << result << endl;
