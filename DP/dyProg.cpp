@@ -1,11 +1,13 @@
 ﻿#include <iostream>
 #include "pch.h"
 #include <vector>
+#include <string>
 #include <windows.h>
 #include "dyProg.h"
 
 using std::cout;
 using std::endl;
+using std::string;
 using std::vector;
 
 dyProg::dyProg()
@@ -19,7 +21,6 @@ dyProg::~dyProg()
 // LeetCode #53 Maximum Subarray
 // Given an integer array nums, find the contiguous subarray (containing at least one number) 
 // which has the largest sum and return its sum.
-
 int dyProg::maxSubArray(vector<int>& nums)
 {
 	int ans = 0, maxn = INT_MIN;
