@@ -7,9 +7,9 @@
 using std::string;
 
 class Solution {
+public:
 	Solution();
 	~Solution();
-
 	int longestValidParentheses(string); // LeetCode #32
 };
 
